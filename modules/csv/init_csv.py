@@ -3,7 +3,7 @@ import pandas as pd
 
 
 def initialize_data_set():
-    countries = pd.read_csv('../assets/countries.csv')
+    countries = pd.read_csv('/Users/serkan/data/assets/countries.csv')
     print(f'Number of movies in dataset: {len(countries)}')
 
     countries.head()

@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 
 def region_pie(countries):
-    region_dict_first_10 = dict(countries.region.value_counts().sort_values(ascending=False).head(10))
+    region_dict_first_10 = dict(countries.Region.value_counts().sort_values(ascending=False).head(10))
     labels = region_dict_first_10.keys()
     sizes = region_dict_first_10.values()
     colors = [
