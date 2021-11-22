@@ -46,6 +46,18 @@ def industry_graph(countries):
 def service_graph(countries):
     service.service_histogram(countries)
 
+def describe_attributes(countries):
+    print(countries['Region'].describe())
+    print(countries['Population'].describe())
+    print(countries['Area'].describe())
+    print(countries['Coastline'].describe())
+    print(countries['NetMigration'].describe())
+    print(countries['GDP'].describe())
+    print(countries['Literacy'].describe())
+    print(countries['Agriculture'].describe())
+    print(countries['Industry'].describe())
+    print(countries['Service'].describe())
+
 countries = initialize_analysis()
 region_graph(countries)
 population_graph(countries)
@@ -57,3 +69,4 @@ literacy_graph(countries)
 agriculture_graph(countries)
 industry_graph(countries)
 service_graph(countries)
+describe_attributes(countries)
