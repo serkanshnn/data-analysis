@@ -9,6 +9,15 @@ from modules.data_set.literacy import literacy
 from modules.data_set.agriculture import agriculture
 from modules.data_set.industry import industry
 from modules.data_set.service import service
+from modules.compare.agriculture import agriculture_compare
+from modules.compare.area import area_compare
+from modules.compare.coastline import coastline_compare
+from modules.compare.industry import industry_compare
+from modules.compare.literacy import literacy_compare
+from modules.compare.net_migration import net_migration_compare
+from modules.compare.population import population_compare
+from modules.compare.region import region_compare
+from modules.compare.service import service_compare
 
 
 def initialize_analysis():
@@ -46,6 +55,26 @@ def industry_graph(countries):
 def service_graph(countries):
     service.service_histogram(countries)
 
+def scatter_plots(countries):
+    agriculture_compare.show_scatter_plot(countries)
+    area_compare.show_scatter_plot(countries)
+    coastline_compare.show_scatter_plot(countries)
+    industry_compare.show_scatter_plot(countries)
+    net_migration_compare.show_scatter_plot(countries)
+    population_compare.show_scatter_plot(countries)
+    region_compare.show_scatter_plot(countries)
+    service_compare.show_scatter_plot(countries)
+
+def regression_plots(countries):
+    agriculture_compare.show_regression(countries)
+    area_compare.show_regression(countries)
+    coastline_compare.show_regression(countries)
+    industry_compare.show_regression(countries)
+    net_migration_compare.show_regression(countries)
+    population_compare.show_regression(countries)
+    service_compare.show_regression(countries)
+
+
 def describe_attributes(countries):
     print(countries['Region'].describe())
     print(countries['Population'].describe())
@@ -70,3 +99,6 @@ agriculture_graph(countries)
 industry_graph(countries)
 service_graph(countries)
 describe_attributes(countries)
+
+scatter_plots(countries)
+regression_plots(countries)
